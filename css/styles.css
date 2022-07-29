@@ -15,24 +15,31 @@
     font-style: normal;
     font-weight: 400;
     src: local(''),
-         url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/poppins-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* poppins-700 - latin */
-  @font-face {
+        url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/poppins-v20-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-700 - latin */
+@font-face {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     src: local(''),
-         url('../fonts/poppins-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/poppins-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
+        url('../fonts/poppins-v20-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/poppins-v20-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
-*,*::before,*::after{
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
-html{
+html {
     height: 100%;
     box-sizing: border-box;
 }
@@ -58,7 +65,7 @@ ul {
     padding-left: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -90,7 +97,7 @@ p {
 }
 
 /* sticky footer */
-.site-main{
+.site-main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,8 +105,8 @@ p {
 }
 
 
-.time{
-    font-size: clamp(4rem, 6rem, 8rem);
+.time {
+    font-size: clamp(3rem, 5rem, 7rem);
     background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -108,9 +115,21 @@ p {
 }
 
 
-@keyframes animate{
-    100%{
+@keyframes animate {
+    100% {
         filter: hue-rotate(360deg);
         -webkit-filter: hue-rotate(360deg);
+    }
 }
+
+@media screen and (max-width:35em) {
+    .time{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width:35em) and (max-width:74.999em) {
+    .time{
+        font-size: 3rem;
+    }
 }
